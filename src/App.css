@@ -1,0 +1,44 @@
+.App {
+  position: relative;
+}
+.AppDarkMode {
+  position: relative;
+  filter: invert(100%);
+}
+.sliderDiv {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 2;
+  /* transform: translate(50%, 50%); */
+}
+.sliderDiv input[type="checkbox"] {
+  width: 60px;
+  height: 30px;
+  position: relative;
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0.899);
+  border-radius: 20px;
+  transition: 0.5s;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.sliderDiv input:checked[type="checkbox"] {
+  background-color: rgba(252, 252, 252, 0.899);
+}
+
+.sliderDiv input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: aliceblue;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+.sliderDiv input:checked[type="checkbox"]:before {
+  left: 30px;
+  background: black;
+}
